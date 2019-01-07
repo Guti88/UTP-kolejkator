@@ -31,8 +31,8 @@
   * Status
   
 **Web Service**
- * Database communication (database operations)
- * Communication with other system components (POST; GET requests + JSON)
+ * Communication with database (database operations)
+ * Communicating with other system components (POST; GET requests + JSON)
  * Checking if communication is allowed
   
 **Web Application**

@@ -12,4 +12,6 @@
 
 **<p align="center">WYDZIAŁ TELEKOMUNIKACJI, INFORMATYKI I ELEKTROTECHNIKI</p>**
 **<p align="center">ZAKŁAD TECHNIKI CYFROWEJ</p>**
-*<p align="center">Projekt studencki UTP systemu kolejkowania </p>*
+
+*<p align="center">University of Science and Technology 2018</p>*
+*<p align="center">Projekt studencki UTP systemu kolejkowania</p>*

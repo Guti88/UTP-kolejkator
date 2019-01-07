@@ -30,24 +30,24 @@
   * idQueue
   * Status
   
-  **Web Service**
-  * Database communication (database operations)
-  * Communication with other system components (POST; GET requests + JSON)
-  * Checking if communication is allowed
+**Web Service**
+ * Database communication (database operations)
+ * Communication with other system components (POST; GET requests + JSON)
+ * Checking if communication is allowed
   
-  **Web Application**
-  * Displaying status of all queues
-  * Displaying status of selected queue
+**Web Application**
+ * Displaying status of all queues
+ * Displaying status of selected queue
   
-  **Raspberry PI RFID scanner**
-  * Scanning student card for ID
-  * Sending a request to enter scanned ID into selected queue
-  * Receiving status of said request
+**Raspberry PI RFID scanner**
+ * Scanning student card for ID
+ * Sending a request to enter scanned ID into selected queue
+ * Receiving status of said request
   
-  **Desktop Application**
-  * Sending a request to halt queue
-  * Sending a request to delete selected ID from queue
-  * Receiving status of selected queue
+**Desktop Application**
+ * Sending a request to halt queue
+ * Sending a request to delete selected ID from queue
+ * Receiving status of selected queue
   
   
   

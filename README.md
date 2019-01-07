@@ -1,4 +1,4 @@
-# UTP-kolejkator
+# Studencki projekt systemu kolejkowania UTP
 
 
 
@@ -14,4 +14,11 @@
 **<p align="center">ZAKŁAD TECHNIKI CYFROWEJ</p>**
 
 *<p align="center">University of Science and Technology 2018</p>*
-*<p align="center">Projekt studencki UTP systemu kolejkowania</p>*
+ 
+## Struktura projektu
+* Baza danych
+  * ZARA DOKONCZE
+
+* Web Service
+  * B1
+  * B2

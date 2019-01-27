@@ -1,0 +1,53 @@
+/// <summary>
+/// Metoda zwracaj¹ca statusy wszystkich kolejek
+/// GET
+/// https://kolejkomatapi.azurewebsites.net/api/queueinfo
+/// </summary>
+/// <returns>    {"idQueue": "1","status": "Otwarta"},{"idQueue": "2","status": "zamknieta"},{"idQueue": "3","status": "Wstrzymana" }</returns>
+
+/// <summary>
+/// Metoda odpowiedzialna za edycjê statusu kolejki
+/// PUT
+/// Link: https://kolejkomatapi.azurewebsites.net/api/queueinfo
+/// </summary>
+/// <param name="value">{"idQueue":"2","Status": "zamknieta"}</param>
+
+/// <summary>
+/// Metoda odpowiedzialna za zwracanie listy studentów w podanej kolejce
+/// GET
+/// Link: https://kolejkomatapi.azurewebsites.net/api/queue/ {id}
+/// </summary>
+/// <param name="id">Numer kolejki</param>
+/// <returns>{"00001","00002"}</returns>
+
+/// <summary>
+/// Metoda odpowiedzialna za zwracanie pozycji studenta na liœcie 
+/// GET
+/// Link: https://kolejkomatapi.azurewebsites.net/api/queue/
+/// </summary>
+/// <param name="student">Numer indeksu studenta w formacie JSON : {"IndexNumber": "00001"}</param>
+/// <returns>  {"queue": "1","position": "1" }</returns>
+
+/// <summary>
+/// Metoda zwracj¹ca dane studenta
+/// GET
+/// Link: https://kolejkomatapi.azurewebsites.net/api/student/ {id}
+/// </summary>
+/// <param name="id">Numer legitymacji</param>
+/// <returns>     {"name": "Adamczewska","surname": "Anna","indexNumber": "00002","field": "Informatyka Stosowana", "isDaily": true,"isMaster": true}</returns>
+
+/// <summary>
+/// Metoda dodaj¹ca studentów do kolejki.
+/// POST
+/// LINK: https://kolejkomatapi.azurewebsites.net/api/student/ {id}
+/// </summary>
+/// <param name="id">Numer kolejki do jakiej dodany ma byæ student</param>
+/// <param name="value">RFID studenta w formacie JSON : {"rfid": "test2"}</param>
+
+/// <summary>
+/// Metoda usuwaj¹ca studenta z kolejki.
+/// Delete
+/// Link: https://kolejkomatapi.azurewebsites.net/api/student/ {id}
+/// </summary>
+/// <param name="id">Numer kolejki</param>
+/// <param name="value">Numer indeksu studenta w formacie JSON :{"IndexNumber": "00001"}</param>

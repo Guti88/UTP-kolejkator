@@ -4,8 +4,8 @@
     "windowsAuthentication": false, 
     "anonymousAuthentication": true, 
     "iisExpress": {
-      "applicationUrl": "http://localhost:51890",
-      "sslPort": 44391
+      "applicationUrl": "http://localhost:50301",
+      "sslPort": 44389
     }
   },
   "profiles": {
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "KolejkatorWebServices": {
+    "KolejkatorApi": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",

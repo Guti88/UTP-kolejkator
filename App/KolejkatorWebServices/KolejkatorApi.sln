@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KolejkatorWebServices", "KolejkatorWebServices\KolejkatorWebServices.csproj", "{DD4DD2B4-2805-4E29-9CAA-9C27DF54DDE0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KolejkatorApi", "KolejkatorApi\KolejkatorApi.csproj", "{C39FF7CC-7A55-4F34-8BA2-B0391778502B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DD4DD2B4-2805-4E29-9CAA-9C27DF54DDE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD4DD2B4-2805-4E29-9CAA-9C27DF54DDE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD4DD2B4-2805-4E29-9CAA-9C27DF54DDE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD4DD2B4-2805-4E29-9CAA-9C27DF54DDE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C39FF7CC-7A55-4F34-8BA2-B0391778502B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C39FF7CC-7A55-4F34-8BA2-B0391778502B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C39FF7CC-7A55-4F34-8BA2-B0391778502B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C39FF7CC-7A55-4F34-8BA2-B0391778502B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {90989387-27D7-4C48-A7A1-7BDB1B0BEA44}
+		SolutionGuid = {07F06238-19C7-4052-9752-314B0E3FAE9F}
 	EndGlobalSection
 EndGlobal

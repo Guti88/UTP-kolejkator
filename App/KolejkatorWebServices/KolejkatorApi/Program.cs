@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace KolejkatorWebServices
+namespace KolejkatorApi
 {
 	public class Program
 	{
@@ -18,7 +18,7 @@ namespace KolejkatorWebServices
 		}
 
 		public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-				WebHost.CreateDefaultBuilder(args)
-						.UseStartup<Startup>();
+			WebHost.CreateDefaultBuilder(args)
+				.UseStartup<Startup>();
 	}
 }

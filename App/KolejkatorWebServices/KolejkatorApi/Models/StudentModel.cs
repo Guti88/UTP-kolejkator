@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace KolejkatorWebServices.Models
+namespace KolejkatorApi.Models
 {
-	public class Student
+	public class StudentModel
 	{
-		public Student(string name, string surname)
+		public StudentModel(string name, string surname)
 		{
 			Name = name;
 			Surname = surname;

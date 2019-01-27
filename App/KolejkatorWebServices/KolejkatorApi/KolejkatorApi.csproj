@@ -2,7 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <UserSecretsId>58dcd6ba-81b1-43cc-b8e5-951f020e43a1</UserSecretsId>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Gracjan Katek</Authors>
+    <PackageId>pl.edu.utp</PackageId>
+    <AssemblyVersion>1.5.10.0</AssemblyVersion>
+    <FileVersion>1.5.10.0</FileVersion>
+    <UserSecretsId>9a1faa9b-af5b-47d6-8082-d47852b189b2</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,8 +18,7 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
-    <PackageReference Include="MySql.Data" Version="8.0.13" />
-    <PackageReference Include="NLog.Config" Version="4.5.11" />
+    <PackageReference Include="MySql.Data" Version="8.0.14" />
   </ItemGroup>
 
 </Project>

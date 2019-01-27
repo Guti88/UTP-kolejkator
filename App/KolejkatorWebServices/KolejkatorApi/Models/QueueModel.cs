@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace KolejkatorWebServices.Models
+namespace KolejkatorApi.Models
 {
-	public class Queue
+	public class QueueModel
 	{
-		public Queue(string id, string status)
+		public QueueModel(string id, string status)
 		{
 			idQueue = id;
 			Status = status;

@@ -13,12 +13,12 @@ namespace KolejkatorApi.Controllers
     [ApiController]
     public class QueueController : ControllerBase
     {
-		MySqlConnection connection = new MySqlConnection("server=kolejkomat01.mysql.database.azure.com;user id=gracjankatek@kolejkomat01;password = Kolejkomat01;persistsecurityinfo=True;database=kolejkadb");
+		MySqlConnection connection = new MySqlConnection("server=kolejkomatdb.mysql.database.azure.com;user id=KolejkomatUser@kolejkomatdb;password = utpSerVer5;persistsecurityinfo=True;database=kolejkadb");
 
 		/// <summary>
 		/// Metoda odpowiedzialna za zwracanie listy studentów w podanej kolejce
 		/// GET
-		/// Link: https://kolejkomatapi.azurewebsites.net/api/queue/ {id}
+		/// Link: http://utpkolejka.azurewebsites.net/api/queue/ {id}
 		/// </summary>
 		/// <param name="id">Numer kolejki</param>
 		/// <returns>{"00001","00002"}</returns>
@@ -40,7 +40,7 @@ namespace KolejkatorApi.Controllers
 		/// <summary>
 		/// Metoda odpowiedzialna za zwracanie pozycji studenta na liście 
 		/// GET
-		/// Link: https://kolejkomatapi.azurewebsites.net/api/queue/
+		/// Link:http://utpkolejka.azurewebsites.net/api/queue/
 		/// </summary>
 		/// <param name="student">Numer indeksu studenta w formacie JSON : {"IndexNumber": "00001"}</param>
 		/// <returns>  {"queue": "1","position": "1" }</returns>

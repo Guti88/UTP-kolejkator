@@ -1,6 +1,7 @@
 ﻿using KolejkatorApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 
 namespace KolejkatorApi.Controllers
@@ -9,12 +10,12 @@ namespace KolejkatorApi.Controllers
     [ApiController]
     public class QueueInfoController : ControllerBase
     {
-		MySqlConnection connection = new MySqlConnection("server=kolejkomat01.mysql.database.azure.com;user id=gracjankatek@kolejkomat01;password = Kolejkomat01;persistsecurityinfo=True;database=kolejkadb");
+		MySqlConnection connection = new MySqlConnection("server=kolejkomatdb.mysql.database.azure.com;user id=KolejkomatUser@kolejkomatdb;password = utpSerVer5;persistsecurityinfo=True;database=kolejkadb");
 
 		/// <summary>
 		/// Metoda zwracająca statusy wszystkich kolejek
 		/// GET
-		/// https://kolejkomatapi.azurewebsites.net/api/queueinfo
+		///http://utpkolejka.azurewebsites.net/api/queueinfo
 		/// </summary>
 		/// <returns>    {"idQueue": "1","status": "Otwarta"},{"idQueue": "2","status": "zamknieta"},{"idQueue": "3","status": "Wstrzymana" }</returns>
 		[HttpGet]
@@ -39,16 +40,25 @@ namespace KolejkatorApi.Controllers
 		/// <summary>
 		/// Metoda odpowiedzialna za edycję statusu kolejki
 		/// PUT
-		/// Link: https://kolejkomatapi.azurewebsites.net/api/queueinfo
+		/// Link:http://utpkolejka.azurewebsites.net/api/queueinfo
 		/// </summary>
 		/// <param name="value">{"idQueue":"2","Status": "zamknieta"}</param>
 		[HttpPut]
-		public void PutQueue([FromBody]QueueModel value)
+		public string PutQueue([FromBody]QueueModel value)
 		{
-			connection.Open();
-			MySqlCommand command = new MySqlCommand("UPDATE queue SET queue.Status = '" + value.Status + "' Where queue.idQueue = '" + value.idQueue + "';", connection);
-			MySqlDataReader reader = command.ExecuteReader();
-			connection.Close();
+			try
+			{
+				connection.Open();
+				MySqlCommand command = new MySqlCommand("UPDATE queue SET queue.Status = '" + value.Status + "' Where queue.idQueue = '" + value.idQueue + "';", connection);
+				MySqlDataReader reader = command.ExecuteReader();
+				connection.Close();
+				return "Aktualizacja przebiegła pomyślnie";
+			}
+			catch(Exception ex)
+			{
+				return "Błąd aktualizacji: " + ex.ToString();
+			}
+			
 		}
 	}
 }

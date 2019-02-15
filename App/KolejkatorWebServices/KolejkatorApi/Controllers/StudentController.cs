@@ -104,7 +104,7 @@ namespace KolejkatorApi.Controllers
 			}
 			catch(Exception ex)
 			{
-				return "Nie udało się dodać: " + ex.ToString();
+				return "Nie udało się dodać do kolejki: Student znajduje się w kolejce. ";
 			}
 		}
 		/// <summary>

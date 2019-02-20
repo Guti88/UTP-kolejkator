@@ -27,7 +27,6 @@ namespace QueuePC
         List<Queue> queueStatuses;
         Student currentStudent;
 
-
         public MainWindow()
         {
             InitializeComponent();
@@ -38,7 +37,9 @@ namespace QueuePC
             dispatcherTimer.Start();
             Thread updateThread = new Thread(UpdateThread);
             updateThread.Start();
+#pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed. Consider applying the 'await' operator to the result of the call.
             ServiceCommands.EditQueueStatus("1", "zamknieta");
+#pragma warning restore CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed. Consider applying the 'await' operator to the result of the call.
         }
 
         /// <summary>
@@ -168,10 +169,14 @@ namespace QueuePC
         {
             if(currentQueueStatus == "wstrzymana")
             {
+#pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed. Consider applying the 'await' operator to the result of the call.
                 ServiceCommands.EditQueueStatus("1", "otwarta");
+#pragma warning restore CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed. Consider applying the 'await' operator to the result of the call.
             }
             else
+#pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed. Consider applying the 'await' operator to the result of the call.
                 ServiceCommands.EditQueueStatus("1", "wstrzymana");
+#pragma warning restore CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed. Consider applying the 'await' operator to the result of the call.
 
         }
 
@@ -182,7 +187,9 @@ namespace QueuePC
         /// <param name="e"></param>
         private void Btn_start_queue_Click(object sender, RoutedEventArgs e)
         {
+#pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed. Consider applying the 'await' operator to the result of the call.
             ServiceCommands.EditQueueStatus("1", "otwarta");
+#pragma warning restore CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed. Consider applying the 'await' operator to the result of the call.
         }
 
         /// <summary>
@@ -192,7 +199,9 @@ namespace QueuePC
         /// <param name="e"></param>
         private void Btn_stop_queue_Click(object sender, RoutedEventArgs e)
         {
+#pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed. Consider applying the 'await' operator to the result of the call.
             ServiceCommands.EditQueueStatus("1", "zamknieta");
+#pragma warning restore CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed. Consider applying the 'await' operator to the result of the call.
         }
 
         /// <summary>
@@ -202,7 +211,9 @@ namespace QueuePC
         /// <param name="e"></param>
         private void Btn_delete_Click(object sender, RoutedEventArgs e)
         {
+#pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed. Consider applying the 'await' operator to the result of the call.
             ServiceCommands.DeleteFromQueueByIdAsync(currentID);
+#pragma warning restore CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed. Consider applying the 'await' operator to the result of the call.
             UpdateView();
         }
 

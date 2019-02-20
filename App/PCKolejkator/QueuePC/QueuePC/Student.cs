@@ -6,4 +6,5 @@
     public string field { get; set; }
     public bool isDaily { get; set; }
     public bool isMaster { get; set; }
+
 }

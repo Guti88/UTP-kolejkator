@@ -11,10 +11,9 @@
         <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="257" Margin="10,72,0,0" VerticalAlignment="Top" Width="205" Background="#FF4B5868" BorderBrush="#FF4B5868" ItemsSource="{Binding IDs}" Focusable="False" IsTextSearchEnabled="False" IsEnabled="False" />
         <Rectangle Fill="#FFEBA576" HorizontalAlignment="Left" Height="38" Margin="10,29,0,0" VerticalAlignment="Top" Width="205" RadiusY="4.167" RadiusX="4.167"/>
         <Rectangle Fill="#FFEBA576" HorizontalAlignment="Left" Height="10" Margin="10,62,0,0" VerticalAlignment="Top" Width="205"/>
-        <Label x:Name="label" Content="Kolejka" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" Width="205" Height="43" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <Button x:Name="btn_start_queue" Content="Uruchom kolejke" HorizontalAlignment="Left" Margin="10,334,0,0" VerticalAlignment="Top" Width="205" Background="#FF3FCDA0" Height="31" FontFamily="Calibri" FontWeight="Bold" FontSize="16" Foreground="#FF3D4855" BorderBrush="#FF3FCDA0" Click="Btn_start_queue_Click"/>
         <Button x:Name="btn_stop_queue" Content="Zatrzymaj kolejke" HorizontalAlignment="Left" Margin="10,370,0,0" VerticalAlignment="Top" Width="205" Background="#FFD8405A" Height="31" FontFamily="Calibri" FontWeight="Bold" FontSize="16" Foreground="#FF3D4855" BorderBrush="#FFD8405A" Click="Btn_stop_queue_Click" IsEnabled="False"/>
-        <Button x:Name="btn_pause" Content="||" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="43" Background="#FFEBA576" Height="31" FontFamily="Calibri" FontSize="22" Foreground="#FF3D4855" BorderBrush="{x:Null}" FontWeight="Bold" Click="Btn_pause_Click" IsEnabled="False"/>
+        <Button x:Name="btn_pause" Content="Kolejka" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" Width="205" Background="#FFEBA576" Height="43" FontFamily="Calibri" FontSize="22" Foreground="#FF3D4855" BorderBrush="{x:Null}" FontWeight="Bold" Click="Btn_pause_Click" IsEnabled="False"/>
         <Rectangle Fill="#FFEBA576" HorizontalAlignment="Left" Height="38" Margin="339,29,0,0" VerticalAlignment="Top" Width="328" RadiusY="4.167" RadiusX="4.167"/>
         <Rectangle Fill="#FFEBA576" HorizontalAlignment="Left" Height="10" Margin="339,62,0,0" VerticalAlignment="Top" Width="328"/>
         <Label x:Name="label_Copy" Content="Dane studenta" HorizontalAlignment="Left" Margin="339,29,0,0" VerticalAlignment="Top" Width="328" Height="43" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
@@ -44,6 +43,8 @@
         <Label x:Name="label1_Copy2" Content="Stopień" HorizontalAlignment="Left" Margin="506,238,0,0" VerticalAlignment="Top" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri"/>
         <Rectangle Fill="#FF3D4855" HorizontalAlignment="Left" Height="2" Margin="506,263,0,0" Stroke="#FF3D4855" VerticalAlignment="Top" Width="121"/>
         <Label x:Name="lb_isMaster" Content="--------------------" HorizontalAlignment="Left" Margin="506,265,0,0" VerticalAlignment="Top" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri" FontSize="18"/>
+        <Image x:Name="img_Play" HorizontalAlignment="Left" Height="49" Margin="10,29,0,0" VerticalAlignment="Top" Width="53" Source="Resuources/Images/Play.png"/>
+        <Image x:Name="img_Pause" HorizontalAlignment="Left" Height="49" Margin="10,29,0,0" VerticalAlignment="Top" Width="52" Source="Resuources/Images/pause.png"/>
 
     </Grid>
 </Window>

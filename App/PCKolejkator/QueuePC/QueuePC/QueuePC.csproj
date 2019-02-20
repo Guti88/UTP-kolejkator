@@ -102,10 +102,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resuources\Images\Discord_2016-10-12_23-22-28.png" />
+    <Resource Include="guzek.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="guzek.txt" />
+    <Resource Include="Resuources\Images\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resuources\Images\play.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

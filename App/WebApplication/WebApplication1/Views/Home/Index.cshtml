@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <style>
+        .queue {
+            float: left;
+            height: 600px;
+            width: 30%;
+            padding-top: 20px;
+            padding-left: auto;
+            padding-right: auto;
+            margin: 5px;
+            margin-top: 15px;
+            border: 2px solid black;
+        }
+
+        .numbers {
+            text-align: center;
+            font-size: 25px;
+            float: left;
+            margin: 4px 100px;
+        }
+    </style>
+</head>
+
+<h2>Index</h2>
+
+<script type="text/javascript">
+ //refresh script
+    setTimeout(function () {
+      location.reload();
+    }, 1 * 30 * 1000);          //every 2 minutes
+</script>
+
+@{WebApplication1.Models.Queue controller = new WebApplication1.Models.Queue(); }
+
+<div class="body-content">
+    <div class="queue" style="background-color: rgb(255,153,153)">
+        <h1>Kolejka 1</h1>
+        <ol id="queue1" class="numbers">
+            @{
+                var query1 = controller.getQueue(1);
+                foreach (var element in query1)
+                {
+                    <li>@element</li>
+                }
+            }
+        </ol>
+    </div>
+
+    <div class="queue" style="background-color: rgb(153, 255,153)">
+        <h1>Kolejka 2</h1>
+        <ol id="queue2" runat="server" class="numbers">
+            @{
+                var query2 = controller.getQueue(2);
+                foreach (var element in query2)
+                {
+                    <li>@element</li>
+                }
+            }
+        </ol>
+    </div>
+
+    <div class="queue" style="background-color: rgb(102,153,255)">
+        <h1>Kolejka 3</h1>
+        <ol id="queue3" runat="server" class="numbers">
+            @{
+                var query3 = controller.getQueue(3);
+                foreach (var element in query3)
+                {
+                    <li>@element</li>
+                }
+            }
+        </ol>
+    </div>
+
+    <div style="clear:both"></div>
+    <div>
+        @{ var position = controller.getStudent(104001, 1);}
+        Pozycja 104001: @position
+    </div>
+</div>

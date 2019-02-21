@@ -26,7 +26,7 @@ namespace KolejkatorApi.Controllers
 		public List<string> GetQueue(int id)
 		{
 			connection.Open();
-			MySqlCommand command = new MySqlCommand("SELECT queue_has_student.Student_IndexNumber FROM queue_has_student where queue_has_student.Queue_idQueue = '" + id +"';", connection);
+			MySqlCommand command = new MySqlCommand("SELECT queue_has_student.Student_IndexNumber FROM queue_has_student where queue_has_student.Queue_idQueue = '" + id + "'order by queue_has_student.Data;", connection);
 			MySqlDataReader reader = command.ExecuteReader();
 			List<string> kolejka = new List<string>();
 			while(reader.Read())

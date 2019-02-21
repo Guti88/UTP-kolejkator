@@ -31,7 +31,7 @@ namespace KolejkatorApi.Controllers
 				string name = reader["Name"].ToString();
 				string surname = reader["Surname"].ToString();
 				string indexNumber= reader["IndexNumber"].ToString();
-				string field = reader["Name"].ToString();
+				string field = reader["Field"].ToString();
 				bool isDaily = true;
 				bool isMaster = true;
 				if (reader["isDaily"].ToString().Equals("0"))
@@ -56,10 +56,10 @@ namespace KolejkatorApi.Controllers
 		/// </summary>
 		/// <param name="idQueue">Numer kolejki do jakiej dodany ma być student</param>
 		/// <param name="value">RFID studenta w formacie JSON : {"RFID": "numer RFID"}</param>
-		[HttpPost("{id}")]
+		[HttpPost("{idQueue}")]
 		public string PostStudent(int idQueue, [FromBody] StudentModel value)
 		{
-			try
+		try
 			{
 				connection.Open();
 				string result = "Dodano studenta";
@@ -113,7 +113,7 @@ namespace KolejkatorApi.Controllers
 		/// Link:  http://utpkolejka.azurewebsites.net/api/student/ {id}
 		/// </summary>
 		/// <param name="id">Numer kolejki</param>
-		/// <param name="value">Numer indeksu studenta w formacie JSON :{"IndexNumber": "00001"}</param>
+		/// <param name="value">Numer indeksu studenta w formacie JSON :{"IndexNumber": "104001"}</param>
 		[HttpDelete("{id}")]
 		public string DeleteStudent(int id, [FromBody] StudentModel value)
 		{

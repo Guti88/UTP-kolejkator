@@ -1,0 +1,33 @@
+		/// <summary>
+		/// Metoda usuwająca studenta z kolejki.
+		/// Delete
+		/// Link:  http://utpkolejka.azurewebsites.net/api/student/ {id}
+		/// </summary>
+		/// <param name="id">Numer kolejki</param>
+		/// <param name="value">Numer indeksu studenta w formacie JSON :{"IndexNumber": "104001"}</param>
+		/// <summary>
+		/// Metoda zwracjąca dane studenta
+		/// GET
+		/// Link: http://utpkolejka.azurewebsites.net/api/student/ {id}
+		/// </summary>
+		/// <param name="id">Numer legitymacji</param>
+		/// <returns>     {"name": "Adamczewska","surname": "Anna","indexNumber": "00002","field": "Informatyka Stosowana", "isDaily": true,"isMaster": true}</returns>
+		/// <summary>
+		/// Metoda zwracająca statusy wszystkich kolejek
+		/// GET
+		///http://utpkolejka.azurewebsites.net/api/queueinfo
+		/// </summary>
+		/// <returns>    {"idQueue": "1","status": "Otwarta"},{"idQueue": "2","status": "zamknieta"},{"idQueue": "3","status": "Wstrzymana" }</returns>
+		/// <summary>
+		/// Metoda odpowiedzialna za edycję statusu kolejki
+		/// PUT
+		/// Link:http://utpkolejka.azurewebsites.net/api/queueinfo
+		/// </summary>
+		/// <param name="value">{"idQueue":"2","Status": "zamknieta"}</param>
+		/// <summary>
+		/// Metoda odpowiedzialna za zwracanie listy studentów w podanej kolejce
+		/// GET
+		/// Link: http://utpkolejka.azurewebsites.net/api/queue/ {id}
+		/// </summary>
+		/// <param name="id">Numer kolejki</param>
+		/// <returns>{"00001","00002"}</returns>

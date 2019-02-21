@@ -8,31 +8,43 @@
         Title="MainWindow" Height="448.5" Width="694" Foreground="#FF3D4855" Background="#FF3D4855">
     <Grid>
         <Rectangle Fill="#FF4B5868" HorizontalAlignment="Left" Height="244" Margin="339,72,0,0" VerticalAlignment="Top" Width="328"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="257" Margin="10,72,0,0" VerticalAlignment="Top" Width="205" Background="#FF4B5868" BorderBrush="#FF4B5868"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="257" Margin="10,72,0,0" VerticalAlignment="Top" Width="205" Background="#FF4B5868" BorderBrush="#FF4B5868" ItemsSource="{Binding IDs}" Focusable="False" IsTextSearchEnabled="False" IsEnabled="False" />
         <Rectangle Fill="#FFEBA576" HorizontalAlignment="Left" Height="38" Margin="10,29,0,0" VerticalAlignment="Top" Width="205" RadiusY="4.167" RadiusX="4.167"/>
         <Rectangle Fill="#FFEBA576" HorizontalAlignment="Left" Height="10" Margin="10,62,0,0" VerticalAlignment="Top" Width="205"/>
-        <Label x:Name="label" Content="Kolejka" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" Width="205" Height="43" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <Button x:Name="button_Copy" Content="Uruchom kolejke" HorizontalAlignment="Left" Margin="10,334,0,0" VerticalAlignment="Top" Width="205" Background="#FF3FCDA0" Height="31" FontFamily="Calibri" FontWeight="Bold" FontSize="16" Foreground="#FF3D4855" BorderBrush="#FF3FCDA0"/>
-        <Button x:Name="button_Copy1" Content="Zatrzymaj kolejke" HorizontalAlignment="Left" Margin="10,370,0,0" VerticalAlignment="Top" Width="205" Background="#FFD8405A" Height="31" FontFamily="Calibri" FontWeight="Bold" FontSize="16" Foreground="#FF3D4855" BorderBrush="#FFD8405A"/>
-        <Button x:Name="button" Content="||" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="43" Background="#FFEBA576" Height="31" FontFamily="Calibri" FontSize="22" Foreground="#FF3D4855" BorderBrush="{x:Null}" FontWeight="Bold"/>
+        <Button x:Name="btn_start_queue" Content="Uruchom kolejke" HorizontalAlignment="Left" Margin="10,334,0,0" VerticalAlignment="Top" Width="205" Background="#FF3FCDA0" Height="31" FontFamily="Calibri" FontWeight="Bold" FontSize="16" Foreground="#FF3D4855" BorderBrush="#FF3FCDA0" Click="Btn_start_queue_Click"/>
+        <Button x:Name="btn_stop_queue" Content="Zatrzymaj kolejke" HorizontalAlignment="Left" Margin="10,370,0,0" VerticalAlignment="Top" Width="205" Background="#FFD8405A" Height="31" FontFamily="Calibri" FontWeight="Bold" FontSize="16" Foreground="#FF3D4855" BorderBrush="#FFD8405A" Click="Btn_stop_queue_Click" IsEnabled="False"/>
+        <Button x:Name="btn_pause" Content="Kolejka" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" Width="205" Background="#FFEBA576" Height="43" FontFamily="Calibri" FontSize="22" Foreground="#FF3D4855" BorderBrush="{x:Null}" FontWeight="Bold" Click="Btn_pause_Click" IsEnabled="False"/>
         <Rectangle Fill="#FFEBA576" HorizontalAlignment="Left" Height="38" Margin="339,29,0,0" VerticalAlignment="Top" Width="328" RadiusY="4.167" RadiusX="4.167"/>
         <Rectangle Fill="#FFEBA576" HorizontalAlignment="Left" Height="10" Margin="339,62,0,0" VerticalAlignment="Top" Width="328"/>
         <Label x:Name="label_Copy" Content="Dane studenta" HorizontalAlignment="Left" Margin="339,29,0,0" VerticalAlignment="Top" Width="328" Height="43" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
 
-        <Rectangle Fill="#FFEBA576" HorizontalAlignment="Left" Height="59" Margin="339,87,0,0" VerticalAlignment="Top" Width="187" Stroke="#FFEBA576"/>
-        <Button x:Name="button_Copy2" Content="X" HorizontalAlignment="Left" Margin="215,72,0,0" VerticalAlignment="Top" Width="43" Background="#FF996A4B" Height="31" FontFamily="Calibri" FontSize="22" Foreground="#FF3D4855" BorderBrush="#FF996A4B" FontWeight="Bold"/>
-        <Label x:Name="label1" Content="Imię i Nazwisko" HorizontalAlignment="Left" Margin="339,87,0,0" VerticalAlignment="Top" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri"/>
+        <Rectangle Fill="#FFEBA576" HorizontalAlignment="Left" Height="59" Margin="339,87,0,0" VerticalAlignment="Top" Width="161" Stroke="#FFEBA576"/>
+        <Button x:Name="btn_delete" Content="X" HorizontalAlignment="Left" Margin="215,72,0,0" VerticalAlignment="Top" Width="43" Background="#FF996A4B" Height="31" FontFamily="Calibri" FontSize="22" Foreground="#FF3D4855" BorderBrush="#FF996A4B" FontWeight="Bold" Click="Btn_delete_Click"/>
+        <Label x:Name="label1" Content="Imię" HorizontalAlignment="Left" Margin="339,87,0,0" VerticalAlignment="Top" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri"/>
         <Rectangle Fill="#FF3D4855" HorizontalAlignment="Left" Height="2" Margin="339,112,0,0" Stroke="#FF3D4855" VerticalAlignment="Top" Width="121"/>
-        <Label x:Name="label1_Copy" Content="Dawid Graczyk" HorizontalAlignment="Left" Margin="339,114,0,0" VerticalAlignment="Top" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri" FontSize="18"/>
-        <Rectangle Fill="#FFEBA576" HorizontalAlignment="Left" Height="59" Margin="339,163,0,0" VerticalAlignment="Top" Width="187" Stroke="#FFEBA576"/>
+        <Label x:Name="lb_Name" Content="--------------------" HorizontalAlignment="Left" Margin="339,114,0,0" VerticalAlignment="Top" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri" FontSize="18"/>
+        <Rectangle Fill="#FFEBA576" HorizontalAlignment="Left" Height="59" Margin="339,163,0,0" VerticalAlignment="Top" Width="328" Stroke="#FFEBA576"/>
         <Label x:Name="label1_Copy1" Content="Kierunek" HorizontalAlignment="Left" Margin="339,163,0,0" VerticalAlignment="Top" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri"/>
         <Rectangle Fill="#FF3D4855" HorizontalAlignment="Left" Height="2" Margin="339,188,0,0" Stroke="#FF3D4855" VerticalAlignment="Top" Width="121"/>
-        <Label x:Name="label1_Copy2" Content="Informatyka Stosowana" HorizontalAlignment="Left" Margin="339,190,0,0" VerticalAlignment="Top" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri" FontSize="18"/>
-        <Rectangle Fill="#FFEBA576" HorizontalAlignment="Left" Height="59" Margin="340,238,0,0" VerticalAlignment="Top" Width="186" Stroke="#FFEBA576"/>
-        <Label x:Name="label1_Copy3" Content="Tryb i stopień" HorizontalAlignment="Left" Margin="340,238,0,0" VerticalAlignment="Top" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri"/>
+        <Label x:Name="lb_Field" Content="--------------------" HorizontalAlignment="Left" Margin="339,190,0,0" VerticalAlignment="Top" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri" FontSize="18"/>
+        <Rectangle Fill="#FFEBA576" HorizontalAlignment="Left" Height="59" Margin="340,238,0,0" VerticalAlignment="Top" Width="160" Stroke="#FFEBA576"/>
+        <Label x:Name="label1_Copy3" Content="Tryb" HorizontalAlignment="Left" Margin="340,238,0,0" VerticalAlignment="Top" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri"/>
         <Rectangle Fill="#FF3D4855" HorizontalAlignment="Left" Height="2" Margin="340,263,0,0" Stroke="#FF3D4855" VerticalAlignment="Top" Width="121"/>
-        <Label x:Name="label1_Copy4" Content="Dzienne, Inżynierskie" HorizontalAlignment="Left" Margin="340,265,0,0" VerticalAlignment="Top" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri" FontSize="18"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="542,87,0,0" VerticalAlignment="Top" Width="111" Source="Resuources/Images/Discord_2016-10-12_23-22-28.png"/>
+        <Label x:Name="lb_X" Content="--------------------" HorizontalAlignment="Left" Margin="340,265,0,0" VerticalAlignment="Top" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri" FontSize="18"/>
+        <Rectangle Fill="#FFEBA576" HorizontalAlignment="Left" Height="59" Margin="505,87,0,0" VerticalAlignment="Top" Width="161" Stroke="#FFEBA576"/>
+        <Label x:Name="lb_copy" Content="Nazwisko" HorizontalAlignment="Left" Margin="505,87,0,0" VerticalAlignment="Top" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri"/>
+        <Rectangle Fill="#FF3D4855" HorizontalAlignment="Left" Height="2" Margin="505,112,0,0" Stroke="#FF3D4855" VerticalAlignment="Top" Width="121"/>
+        <Label x:Name="lb_Surname" Content="--------------------" HorizontalAlignment="Left" Margin="505,114,0,0" VerticalAlignment="Top" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri" FontSize="18"/>
+        <Rectangle Fill="#FFEBA576" HorizontalAlignment="Left" Height="59" Margin="340,238,0,0" VerticalAlignment="Top" Width="160" Stroke="#FFEBA576"/>
+        <Label x:Name="label1_Copy" Content="Tryb" HorizontalAlignment="Left" Margin="340,238,0,0" VerticalAlignment="Top" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri"/>
+        <Rectangle Fill="#FF3D4855" HorizontalAlignment="Left" Height="2" Margin="340,263,0,0" Stroke="#FF3D4855" VerticalAlignment="Top" Width="121"/>
+        <Label x:Name="lb_isDaily" Content="--------------------" HorizontalAlignment="Left" Margin="340,265,0,0" VerticalAlignment="Top" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri" FontSize="18"/>
+        <Rectangle Fill="#FFEBA576" HorizontalAlignment="Left" Height="59" Margin="506,238,0,0" VerticalAlignment="Top" Width="160" Stroke="#FFEBA576"/>
+        <Label x:Name="label1_Copy2" Content="Stopień" HorizontalAlignment="Left" Margin="506,238,0,0" VerticalAlignment="Top" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri"/>
+        <Rectangle Fill="#FF3D4855" HorizontalAlignment="Left" Height="2" Margin="506,263,0,0" Stroke="#FF3D4855" VerticalAlignment="Top" Width="121"/>
+        <Label x:Name="lb_isMaster" Content="--------------------" HorizontalAlignment="Left" Margin="506,265,0,0" VerticalAlignment="Top" Foreground="#FF3D4855" FontWeight="Bold" FontFamily="Calibri" FontSize="18"/>
+        <Image x:Name="img_Play" HorizontalAlignment="Left" Height="49" Margin="10,29,0,0" VerticalAlignment="Top" Width="53" Source="Resuources/Images/Play.png"/>
+        <Image x:Name="img_Pause" HorizontalAlignment="Left" Height="49" Margin="10,29,0,0" VerticalAlignment="Top" Width="52" Source="Resuources/Images/pause.png"/>
 
     </Grid>
 </Window>

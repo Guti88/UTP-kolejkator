@@ -23,7 +23,7 @@ namespace KolejkatorApi.Controllers
 		public List<StudentForGuzekModel> GetStudent(string id)
 		{
 			connection.Open();
-			MySqlCommand command = new MySqlCommand("SELECT student.Name, student.Surname, student.IndexNumber, field.Name, field.isDaily,  field.isMaster From student left outer join field_has_student on field_has_student.Student_idStudent = student.idStudent inner join field on field.idField = field_has_student.Field_idField  where student.IndexNumber = '" + id + "';", connection);
+			MySqlCommand command = new MySqlCommand("SELECT student.Name, student.Surname, student.IndexNumber, field.FieldName, field.isDaily,  field.isMaster From student left outer join field_has_student on field_has_student.Student_idStudent = student.idStudent inner join field on field.idField = field_has_student.Field_idField  where student.IndexNumber = '" + id + "';", connection);
 			MySqlDataReader reader = command.ExecuteReader();
 			List<StudentForGuzekModel> studentList = new List<StudentForGuzekModel>();
 			while (reader.Read())
@@ -31,7 +31,7 @@ namespace KolejkatorApi.Controllers
 				string name = reader["Name"].ToString();
 				string surname = reader["Surname"].ToString();
 				string indexNumber= reader["IndexNumber"].ToString();
-				string field = reader["Field"].ToString();
+				string field = reader["FieldName"].ToString();
 				bool isDaily = true;
 				bool isMaster = true;
 				if (reader["isDaily"].ToString().Equals("0"))
